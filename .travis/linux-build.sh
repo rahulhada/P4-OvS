@@ -150,7 +150,7 @@ function install_pi()
     git checkout tags/v3.6.1
     ./autogen.sh
     ./configure
-    make -j4
+    make
     sudo make install
     sudo ldconfig
     popd
@@ -159,7 +159,7 @@ function install_pi()
     pushd grpc
     git checkout tags/v1.17.2
     git submodule update --init --recursive
-    make -j4
+    make
     sudo make install
     sudo ldconfig
     popd
@@ -169,7 +169,7 @@ function install_pi()
     git submodule update --init --recursive
     ./autogen.sh
     ./configure --with-proto
-    make -j4
+    make
     sudo make install
     sudo ldconfig
     popd
